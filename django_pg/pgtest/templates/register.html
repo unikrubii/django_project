@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<br><br><br>
+<h1 align="center">Register</h1>
+<form action="submit" method="post">
+	{% csrf_token %}
+	<div class="form-group">
+		<label for="firstname">Firstname</label>
+		<input type="text" class="form-control" name="firstname" placeholder="Enter firstname">
+	</div>
+	<br>
+	<div class="form-group">
+		<label for="lastname">Lastname</label>
+		<input type="text" class="form-control" name="lastname" placeholder="Enter lastname">
+	</div>
+	<br>
+	<div class="form-group">
+		<label for="lastname">Email</label>
+		<input type="text" class="form-control" name="email" placeholder="Enter email">
+	</div>
+	<br>
+	<input type="submit" class="btn btn-primary" value="submit">
+</form>
+{% endblock %}
